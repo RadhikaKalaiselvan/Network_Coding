@@ -1,0 +1,504 @@
+
+ #########Group From 12
+      set udp1 [$ns_ create-connection UDP $n12 LossMonitor $n11 0]
+      set cbr1 [$udp1 attach-app Traffic/CBR]
+      $cbr1 set packetSize_ 1000    
+      $cbr1 set interval_ .09
+      $ns_ at 1.1 "$n12 label Sharing"
+      $ns_ at 1.2 "$n12 label A"
+      $ns_ at 1.3 "$n12 label To"
+      $ns_ at 1.4 "$n12 label Neighbour_Nodes"
+      $ns_ at 1.5 "$n12 label Using"
+      $ns_ at 1.6 "$n12 label Multi-Generation"
+      $ns_ at 1.7 "$n12 label User_2"
+
+      $ns_ at 1.3 "$n11 label A"
+      $ns_ at 1.4 "$n11 label Received"
+      $ns_ at 1.5 "$n11 label From"
+      $ns_ at 1.6 "$n11 label User_2"
+      $ns_ at 1.7 "$n11 color green"
+      $ns_ at 1.8 "$n11 label Node"
+      $ns_ at 1.1 "$cbr1 start"
+      $ns_ at 2.0 "$cbr1 stop"
+
+     
+      set udp3 [$ns_ create-connection UDP $n12 LossMonitor $n17 0]
+      set cbr3 [$udp3 attach-app Traffic/CBR]
+      $cbr3 set packetSize_ 1000    
+      $cbr3 set interval_ .09
+      $ns_ at 1.33 "$n17 label A"
+      $ns_ at 1.43 "$n17 label Received"
+      $ns_ at 1.53 "$n17 label From"
+      $ns_ at 1.63 "$n17 label User_2"
+      $ns_ at 1.73 "$n17 color green"
+      $ns_ at 1.83 "$n17 label Node"
+      $ns_ at 1.33 "$cbr3 start"
+      $ns_ at 2.0 "$cbr3 stop"
+
+set udp3z [$ns_ create-connection UDP $n12 LossMonitor $n9 0]
+      set cbr3z [$udp3z attach-app Traffic/CBR]
+      $cbr3z set packetSize_ 1000    
+      $cbr3z set interval_ .09
+      $ns_ at 1.33 "$n9 label A"
+      $ns_ at 1.43 "$n9 label Received"
+      $ns_ at 1.53 "$n9 label From"
+      $ns_ at 1.63 "$n9 label User_2"
+      $ns_ at 1.73 "$n9 color green"
+      $ns_ at 1.83 "$n9 label Node"
+      $ns_ at 1.33 "$cbr3z start"
+      $ns_ at 2.0 "$cbr3z stop"
+
+      set udp4 [$ns_ create-connection UDP $n12 LossMonitor $n10 0]
+      set cbr4 [$udp4 attach-app Traffic/CBR]
+      $cbr1 set packetSize_ 1000    
+      $cbr1 set interval_ .09
+      $ns_ at 1.36 "$n10 label A"
+      $ns_ at 1.46 "$n10 label Received"
+      $ns_ at 1.56 "$n10 label From"
+      $ns_ at 1.66 "$n10 label User_2"
+      $ns_ at 1.76 "$n10 color green"
+      $ns_ at 1.86 "$n10 label Node"
+      $ns_ at 1.36 "$cbr4 start"
+      $ns_ at 2.0 "$cbr4 stop"
+
+
+      set udp5 [$ns_ create-connection UDP $n12 LossMonitor $n16 0]
+      set cbr5 [$udp5 attach-app Traffic/CBR]
+      $cbr5 set packetSize_ 1000    
+      $cbr5 set interval_ .09
+      $ns_ at 1.38 "$n16 label A"
+      $ns_ at 1.48 "$n16 label Received"
+      $ns_ at 1.58 "$n16 label From"
+      $ns_ at 1.68 "$n16 label User_2"
+      $ns_ at 1.78 "$n16 color green"
+      $ns_ at 1.88 "$n16 label Node"
+      $ns_ at 1.38 "$cbr5 start"
+      $ns_ at 2.0 "$cbr5 stop"
+
+      set udp6 [$ns_ create-connection UDP $n12 LossMonitor $n13 0]
+      set cbr6 [$udp6 attach-app Traffic/CBR]
+      $cbr6 set packetSize_ 1000    
+      $cbr6 set interval_ .09
+      $ns_ at 1.4 "$n13 label A"
+      $ns_ at 1.5 "$n13 label Received"
+      $ns_ at 1.6 "$n13 label From"
+      $ns_ at 1.7 "$n13 label User_2"
+      $ns_ at 1.8 "$n13 color green"
+      $ns_ at 1.9 "$n13 label Node"
+      $ns_ at 1.4 "$cbr6 start"
+      $ns_ at 2.0 "$cbr6 stop"
+     
+      #########Group2 From 12
+      set udp1a [$ns_ create-connection UDP $n12 LossMonitor $n11 0]
+      set cbr1a [$udp1a attach-app Traffic/CBR]
+      $cbr1a set packetSize_ 1000    
+      $cbr1a set interval_ .09
+      $ns_ at 2.1 "$n12 label Encoded"
+      $ns_ at 2.2 "$n12 label A1"
+      $ns_ at 2.3 "$n12 label To"
+      $ns_ at 2.4 "$n12 label Neighbour_Nodes"
+      $ns_ at 2.5 "$n12 label Using"
+      $ns_ at 2.6 "$n12 label Multi-Generation"
+      $ns_ at 2.7 "$n12 label User_2"
+
+      $ns_ at 2.3 "$n11 label A"
+      $ns_ at 2.4 "$n11 label +Encoded(A1)"
+      $ns_ at 2.5 "$n11 label Received"
+      $ns_ at 2.6 "$n11 label From"
+      $ns_ at 2.7 "$n11 label User_2"
+      $ns_ at 2.8 "$n11 color green"
+      $ns_ at 2.9 "$n11 label Node"
+      $ns_ at 2.1 "$cbr1a start"
+      $ns_ at 3.0 "$cbr1a stop"
+
+     
+      set udp3a [$ns_ create-connection UDP $n12 LossMonitor $n17 0]
+      set cbr3a [$udp3a attach-app Traffic/CBR]
+      $cbr3a set packetSize_ 1000    
+      $cbr3a set interval_ .09
+      $ns_ at 2.3 "$n17 label A"
+      $ns_ at 2.36 "$n17 label +Encoded(A1)"
+      $ns_ at 2.43 "$n17 label Received"
+      $ns_ at 2.53 "$n17 label From"
+      $ns_ at 2.63 "$n17 label User_2"
+      $ns_ at 2.73 "$n17 color green"
+      $ns_ at 2.83 "$n17 label Node"
+      $ns_ at 2.33 "$cbr3a start"
+      $ns_ at 3.0 "$cbr3a stop"
+
+      set udp4a [$ns_ create-connection UDP $n12 LossMonitor $n10 0]
+      set cbr4a [$udp4a attach-app Traffic/CBR]
+      $cbr4a set packetSize_ 1000    
+      $cbr4a set interval_ .09
+      $ns_ at 2.3 "$n10 label A"
+      $ns_ at 2.38 "$n10 label +Encoded(A1)"
+      $ns_ at 2.46 "$n10 label Received"
+      $ns_ at 2.56 "$n10 label From"
+      $ns_ at 2.66 "$n10 label User_2"
+      $ns_ at 2.76 "$n10 color green"
+      $ns_ at 2.86 "$n10 label Node"
+      $ns_ at 2.36 "$cbr4a start"
+      $ns_ at 3.0 "$cbr4a stop"
+
+
+      set udp5a [$ns_ create-connection UDP $n12 LossMonitor $n16 0]
+      set cbr5a [$udp5a attach-app Traffic/CBR]
+      $cbr5a set packetSize_ 1000    
+      $cbr5a set interval_ .09
+      $ns_ at 2.3 "$n16 label A"
+      $ns_ at 2.38 "$n16 label +Encoded(A1)"
+      $ns_ at 2.48 "$n16 label Received"
+      $ns_ at 2.58 "$n16 label From"
+      $ns_ at 2.68 "$n16 label User_2"
+      $ns_ at 2.78 "$n16 color green"
+      $ns_ at 2.88 "$n16 label Node"
+      $ns_ at 2.38 "$cbr5a start"
+      $ns_ at 3.0 "$cbr5a stop"
+
+      set udp6a [$ns_ create-connection UDP $n12 LossMonitor $n13 0]
+      set cbr6a [$udp6a attach-app Traffic/CBR]
+      $cbr6a set packetSize_ 1000    
+      $cbr6a set interval_ .09
+      $ns_ at 2.3 "$n13 label A"
+      $ns_ at 2.38 "$n13 label +Encoded(A1)"
+      $ns_ at 2.5 "$n13 label Received"
+      $ns_ at 2.6 "$n13 label From"
+      $ns_ at 2.7 "$n13 label User_2"
+      $ns_ at 2.8 "$n13 color green"
+      $ns_ at 2.9 "$n13 label Node"
+      $ns_ at 2.4 "$cbr6a start"
+      $ns_ at 3.0 "$cbr6a stop"
+
+set udp6az [$ns_ create-connection UDP $n12 LossMonitor $n9 0]
+      set cbr6az [$udp6az attach-app Traffic/CBR]
+      $cbr6az set packetSize_ 1000    
+      $cbr6az set interval_ .09
+      $ns_ at 2.3 "$n9 label A"
+      $ns_ at 2.38 "$n9 label +Encoded(A1)"
+      $ns_ at 2.5 "$n9 label Received"
+      $ns_ at 2.6 "$n9 label From"
+      $ns_ at 2.7 "$n9 label User_2"
+      $ns_ at 2.8 "$n9 color green"
+      $ns_ at 2.9 "$n9 label Node"
+      $ns_ at 2.4 "$cbr6az start"
+      $ns_ at 3.0 "$cbr6az stop"
+
+
+
+      #########Group3 From 12
+
+     
+     
+      set udp13 [$ns_ create-connection UDP $n6 LossMonitor $n2 0]
+      set cbr13 [$udp13 attach-app Traffic/CBR]
+      $cbr13 set packetSize_ 1000    
+      $cbr13 set interval_ .09
+      $ns_ at 3.5 "$n6 label Sharing"
+      $ns_ at 3.6 "$n6 label B"
+      $ns_ at 3.7 "$n6 label To"
+      $ns_ at 3.8 "$n6 label Neighbour_Nodes"
+      $ns_ at 3.9 "$n6 label Using"
+      $ns_ at 4.0 "$n6 label Multi-Generation"
+      $ns_ at 4.1 "$n6 label User_1"
+
+      $ns_ at 4.61 "$n2 label B"
+      $ns_ at 4.7 "$n2 label Received"
+      $ns_ at 4.8 "$n2 label From"
+      $ns_ at 4.9 "$n2 label User_1"
+      $ns_ at 5.0 "$n2 color green"
+      $ns_ at 5.1 "$n2 label Node"
+
+      $ns_ at 3.5 "$cbr13 start"
+      $ns_ at 5.1 "$cbr13 stop"
+
+
+
+      set udp14 [$ns_ create-connection UDP $n6 LossMonitor $n7 0]
+      set cbr14 [$udp14 attach-app Traffic/CBR]
+      $cbr14 set packetSize_ 1000    
+      $cbr14 set interval_ .09
+      $ns_ at 4.62 "$n7 label B"
+      $ns_ at 4.7 "$n7 label Received"
+      $ns_ at 4.8 "$n7 label From"
+      $ns_ at 4.9 "$n7 label User_1"
+      $ns_ at 5.0 "$n7 color green"
+      $ns_ at 5.1 "$n7 label Node"
+      $ns_ at 4.62 "$cbr14 start"
+      $ns_ at 5.1 "$cbr14 stop"
+
+      
+      set udp15 [$ns_ create-connection UDP $n6 LossMonitor $n9 0]
+      set cbr15 [$udp15 attach-app Traffic/CBR]
+      $cbr15 set packetSize_ 1000    
+      $cbr15 set interval_ .09
+      $ns_ at 4.65 "$n9 label B"
+      $ns_ at 4.75 "$n9 label Received"
+      $ns_ at 4.85 "$n9 label From"
+      $ns_ at 4.95 "$n9 label User_1"
+      $ns_ at 4.95 "$n9 color green"
+      $ns_ at 5.05 "$n9 label Node"
+      $ns_ at 4.65 "$cbr15 start"
+      $ns_ at 5.05 "$cbr15 stop"
+
+
+
+      set udp16 [$ns_ create-connection UDP $n6 LossMonitor $n10 0]
+      set cbr16 [$udp16 attach-app Traffic/CBR]
+      $cbr16 set packetSize_ 1000    
+      $cbr16 set interval_ .09
+      $ns_ at 4.75 "$n10 label B"
+      $ns_ at 4.85 "$n10 label Received"
+      $ns_ at 4.95 "$n10 label From"
+      $ns_ at 5.05 "$n10 label User_1"
+      $ns_ at 5.05 "$n10 color green"
+      $ns_ at 5.15 "$n10 label Node"
+      $ns_ at 4.75 "$cbr16 start"
+      $ns_ at 5.05 "$cbr16 stop"
+
+      set udp17 [$ns_ create-connection UDP $n6 LossMonitor $n11 0]
+      set cbr17 [$udp17 attach-app Traffic/CBR]
+      $cbr17 set packetSize_ 1000    
+      $cbr17 set interval_ .09
+      $ns_ at 4.85 "$n11 label B"
+      $ns_ at 4.95 "$n11 label Received"
+      $ns_ at 5.05 "$n11 label From"
+      $ns_ at 5.15 "$n11 label User_1"
+      $ns_ at 5.15 "$n11 color green"
+      $ns_ at 5.25 "$n11 label Node"
+      $ns_ at 4.85 "$cbr17 start"
+      $ns_ at 5.25 "$cbr17 stop"
+
+
+      set udp18 [$ns_ create-connection UDP $n6 LossMonitor $n5 0]
+      set cbr18 [$udp18 attach-app Traffic/CBR]
+      $cbr18 set packetSize_ 1000    
+      $cbr18 set interval_ .09
+      $ns_ at 4.95 "$n5 label B"
+      $ns_ at 5.05 "$n5 label Received"
+      $ns_ at 5.15 "$n5 label From"
+      $ns_ at 5.25 "$n5 label User_1"
+      $ns_ at 5.25 "$n5 color green"
+      $ns_ at 5.35 "$n5 label Node"
+      $ns_ at 4.96 "$cbr18 start"
+      $ns_ at 5.35 "$cbr18 stop"
+      
+
+      #########Group From 6
+      
+      set udp13a [$ns_ create-connection UDP $n6 LossMonitor $n2 0]
+      set cbr13a [$udp13a attach-app Traffic/CBR]
+      $cbr13a set packetSize_ 1000    
+      $cbr13a set interval_ .09
+      $ns_ at 5.55 "$n6 label Encoded"
+      $ns_ at 5.65 "$n6 label B1"
+      $ns_ at 5.75 "$n6 label To"
+      $ns_ at 5.85 "$n6 label Neighbour_Nodes"
+      $ns_ at 5.95 "$n6 label Using"
+      $ns_ at 6.05 "$n6 label Multi-Generation"
+      $ns_ at 6.15 "$n6 label User_1"
+
+      $ns_ at 5.60 "$n2 label B"
+      $ns_ at 5.70 "$n2 label +Encoded(B1)"
+      $ns_ at 5.80 "$n2 label Received"
+      $ns_ at 5.90 "$n2 label From"
+      $ns_ at 6.0 "$n2 label User_1"
+      $ns_ at 6.1 "$n2 color green"
+      $ns_ at 6.1 "$n2 label Node"
+      $ns_ at 5.55 "$cbr13a start"
+      $ns_ at 6.1 "$cbr13a stop"
+
+
+
+      set udp14a [$ns_ create-connection UDP $n6 LossMonitor $n7 0]
+      set cbr14a [$udp14a attach-app Traffic/CBR]
+      $cbr14a set packetSize_ 1000    
+      $cbr14a set interval_ .09
+      $ns_ at 5.62 "$n7 label B"
+      $ns_ at 5.72 "$n7 label +Encoded(B1)"
+      $ns_ at 5.8 "$n7 label Received"
+      $ns_ at 5.9 "$n7 label From"
+      $ns_ at 6.0 "$n7 label User_1"
+      $ns_ at 6.1 "$n7 color green"
+      $ns_ at 6.1 "$n7 label Node"
+      $ns_ at 5.61 "$cbr14a start"
+      $ns_ at 6.1 "$cbr14a stop"
+
+      
+
+      set udp15a [$ns_ create-connection UDP $n6 LossMonitor $n9 0]
+      set cbr15a [$udp15a attach-app Traffic/CBR]
+      $cbr15a set packetSize_ 1000    
+      $cbr15a set interval_ .09
+      $ns_ at 5.73 "$n7 label Encoded(B1)"
+      $ns_ at 5.8 "$n9 label Received"
+      $ns_ at 5.9 "$n9 label From"
+      $ns_ at 6.0 "$n9 label User_1"
+      $ns_ at 6.1 "$n9 color green"
+      $ns_ at 6.1 "$n9 label Node"
+      $ns_ at 5.63 "$cbr15a start"
+      $ns_ at 6.1 "$cbr15a stop"
+
+
+      set udp16a [$ns_ create-connection UDP $n6 LossMonitor $n10 0]
+      set cbr16a [$udp16a attach-app Traffic/CBR]
+      $cbr16a set packetSize_ 1000    
+      $cbr16a set interval_ .09
+      $ns_ at 5.74 "$n10 label Encoded(B1)"
+      $ns_ at 5.8 "$n10 label Received"
+      $ns_ at 5.9 "$n10 label From"
+      $ns_ at 6.0 "$n10 label User_1"
+      $ns_ at 6.1 "$n10 color green"
+      $ns_ at 6.1 "$n10 label Node"
+      $ns_ at 5.65 "$cbr16a start"
+      $ns_ at 6.1 "$cbr16a stop"
+
+      set udp17a [$ns_ create-connection UDP $n6 LossMonitor $n11 0]
+      set cbr17a [$udp17a attach-app Traffic/CBR]
+      $cbr17a set packetSize_ 1000    
+      $cbr17a set interval_ .09
+      $ns_ at 5.77 "$n11 label Encoded(B1)"
+      $ns_ at 5.87 "$n11 label Received"
+      $ns_ at 5.97 "$n11 label From"
+      $ns_ at 6.07 "$n11 label User_1"
+      $ns_ at 6.17 "$n11 color green"
+      $ns_ at 6.17 "$n11 label Node"
+      $ns_ at 5.67 "$cbr17a start"
+      $ns_ at 6.17 "$cbr17a stop"
+
+
+      set udp18a [$ns_ create-connection UDP $n6 LossMonitor $n5 0]
+      set cbr18a [$udp18a attach-app Traffic/CBR]
+      $cbr18a set packetSize_ 1000    
+      $cbr18a set interval_ .09
+      $ns_ at 5.69 "$n5 label B"
+      $ns_ at 5.79 "$n5 label +Encoded(B1)"
+      $ns_ at 5.89 "$n5 label Received"
+      $ns_ at 5.99 "$n5 label From"
+      $ns_ at 6.09 "$n5 label User_1"
+      $ns_ at 6.19 "$n5 color green"
+      $ns_ at 6.19 "$n5 label Node"
+      $ns_ at 5.70 "$cbr18a start"
+      $ns_ at 6.20 "$cbr18a stop"
+ 
+  
+      #######################################
+
+      $ns_ at 6.5 "$n9 color magenta"
+      $ns_ at 6.5 "$n10 color magenta"
+      $ns_ at 6.5 "$n11 color magenta"
+
+      
+      $ns_ at 6.6 "$n9 label Encoded(B1)+Encoded(A1)"
+    
+      
+      $ns_ at 6.6 "$n10 label Encoded(B1)+Encoded(A1)"
+      
+      
+      $ns_ at 6.6 "$n11 label Encoded(B1)+Encoded(A1)"
+      
+
+      $ns_ at 6.7 "$n9 label Network_Coding"
+      $ns_ at 6.7 "$n10 label Network_Coding"
+      $ns_ at 6.7 "$n11 label Network_Coding"
+
+      ##############
+  	  
+       
+      set udp4bb1 [$ns_ create-connection UDP $n9 LossMonitor $n7 0]
+      set cbr4bb1 [$udp4bb1 attach-app Traffic/CBR]
+      $cbr4bb1 set packetSize_ 1000    
+      $cbr4bb1 set interval_ .09
+      $ns_ at 7.31 "$n7 label +Encoded(B1)"
+      $ns_ at 7.41 "$n7 label +Encoded(A1)"
+      $ns_ at 7.81 "$n7 label From"
+      $ns_ at 7.91 "$n7 label User_9"
+      $ns_ at 7.93 "$n7 color green"
+      $ns_ at 7.98 "$n7 label Node"
+      $ns_ at 7.31 "$cbr4bb1 start"
+      $ns_ at 8.0 "$cbr4bb1 stop"
+
+	  
+  ##########################
+      ##############
+  	  
+      set udp18v [$ns_ create-connection UDP $n7 LossMonitor $n1 0]
+      set cbr18v [$udp18v attach-app Traffic/CBR]
+      $cbr18v set packetSize_ 1000    
+      $cbr18v set interval_ .0001
+      $ns_ at 8.1 "$n7 label Encoded(B1)"
+      $ns_ at 8.2 "$n7 label +Encoded(A1)"
+      $ns_ at 8.3 "$n7 label Sending_To"
+      $ns_ at 8.4 "$n7 label Destination"
+      $ns_ at 8.5 "$n7 label Node"
+      $ns_ at 8.5 "$n1 label Encoded(B1)"
+      $ns_ at 8.54 "$n1 label +Encoded(A1)"
+      $ns_ at 8.6 "$n1 label Destination"
+      $ns_ at 8.1 "$cbr18v start"
+      $ns_ at 8.6 "$cbr18v stop"
+	  
+	 
+      set udp18vvv1 [$ns_ create-connection UDP $n7 LossMonitor $n1 0]
+      set cbr18vvv1 [$udp18vvv1 attach-app Traffic/CBR]
+      $cbr18vvv1 set packetSize_ 1000    
+      $cbr18vvv1 set interval_ .09
+      $ns_ at 10.1 "$n7 label Encoded(B1)"
+      $ns_ at 10.2 "$n7 label +Encoded(A1)"
+      $ns_ at 10.3 "$n7 label Sending_To"
+      $ns_ at 10.4 "$n7 label Destination"
+      $ns_ at 10.5 "$n7 label Node"
+      $ns_ at 10.6 "$n1 label Encoded(B1)"
+      $ns_ at 10.64 "$n1 label +Encoded(A1)"
+      $ns_ at 10.68 "$n1 label Received"
+      $ns_ at 10.7 "$n1 label Destination"
+      $ns_ at 10.1 "$cbr18vvv1 start"
+      $ns_ at 10.75 "$cbr18vvv1 stop"
+	  
+      set udp4bb1a [$ns_ create-connection UDP $n7 LossMonitor $n1 0]
+      set cbr4bb1a [$udp4bb1a attach-app Traffic/CBR]
+      $cbr4bb1a set packetSize_ 1000    
+      $cbr4bb1a set interval_ .09
+      $ns_ at 10.8 "$n1 label +Encoded(A1)"
+      $ns_ at 10.9 "$n1 label Received"
+      $ns_ at 11.0 "$n1 label From"
+      $ns_ at 11.1 "$n1 label User_7"
+      $ns_ at 11.2 "$n1 color yellow"
+      $ns_ at 11.3 "$n1 label Destination"
+      $ns_ at 10.8 "$cbr4bb1a start"
+      $ns_ at 11.45 "$cbr4bb1a stop"
+
+	  
+      
+      ######################
+
+        
+      set udp18v1 [$ns_ create-connection UDP $n2 LossMonitor $n1 0]
+      set cbr18v1 [$udp18v1 attach-app Traffic/CBR]
+      $cbr18v1 set packetSize_ 1000    
+      $cbr18v1 set interval_ .09
+      $ns_ at 10.3 "$n2 label Encoded(B1)"
+      $ns_ at 10.4 "$n2 label Sending_To"
+      $ns_ at 10.5 "$n2 label Destination"
+      $ns_ at 10.6 "$n2 label Node"
+      $ns_ at 10.5 "$n1 label Encoded(B1)"
+      $ns_ at 10.6 "$n1 label Received"
+      $ns_ at 10.7 "$n1 label Destination"
+      $ns_ at 10.25 "$cbr18v1 start"
+      $ns_ at 10.75 "$cbr18v1 stop"
+	  
+      set udp4bb1a1 [$ns_ create-connection UDP $n2 LossMonitor $n1 0]
+      set cbr4bb1a1 [$udp4bb1a1 attach-app Traffic/CBR]
+      $cbr4bb1a1 set packetSize_ 1000    
+      $cbr4bb1a1 set interval_ .09
+      $ns_ at 10.8 "$n1 label +Encoded(B1)"
+      $ns_ at 10.9 "$n1 label Received"
+      $ns_ at 11.0 "$n1 label From"
+      $ns_ at 11.1 "$n1 label User_2"
+      $ns_ at 11.2 "$n1 color yellow"
+      $ns_ at 11.3 "$n1 label Destination"
+            $ns_ at 11.5 "$n1 label X_OR"
+             $ns_ at 11.6 "$n1 label Encoded(A1)"
+             $ns_ at 11.7 "$n1 label Received"
+             $ns_ at 11.8 "$n1 label Decoded(A1)"
+
+      $ns_ at 10.8 "$cbr4bb1a1 start"
+      $ns_ at 11.9 "$cbr4bb1a1 stop"

@@ -1,0 +1,3 @@
+exec xgraph -brb -geometry 1000X600 -t Existing -x Number_of-Users -y Without-Classification SendingData.tr ReceivingData.tr CongestionOccured.tr &
+exec xgraph -brb -geometry 1000X600 -t Proposed -x Number_of-Users -y Packet_Delivery-ratio SendingData1.tr ReceivingData1.tr AlternativePath.tr &
+exec xgraph -m -bb -geometry 700X400 -t Efficiency -x Number_of-Request -y Packet_Delivery-ratio Throughput.tr SendingPacket.tr ReceivingPacket.tr &
